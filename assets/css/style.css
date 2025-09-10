@@ -1,4 +1,36 @@
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      transition: 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
 
+    body.dark-mode nav.fixed-top {
+        background-color:  #222;
+        color: #ffffff;
+    }
+    body.dark-mode  nav.fixed-top .logo.logo {
+        filter: brightness(0) invert(1);
+        }
+    body.dark-mode nav.fixed-top .nav-item .nav-link{
+        color: #fff ;
+    }
+    body.dark-mode .bg-gray{
+        background: #222;
+    }
+    body.dark-mode .main-btn:hover {
+    color: #000;
+    background-color: #fff;
+    }
+    body.dark-mode .contact-container{
+        background: #161515
+    }
+    body.dark-mode .blogs .blog-item .blog-content{
+        background: #161515
+    }
 /*===========Helpers Css============*/
 
 .heading {
@@ -32,7 +64,7 @@
     padding: 10px 20px;
     border: 2px solid #A9BA9D;
     color: #000;
-    text-transform: uppercase;
+    text-decoration: none;
     -webkit-transition: .2s background-color ease;
     -o-transition: .2s background-color ease;
     transition: .2s background-color ease;
@@ -45,6 +77,7 @@
 .main-btn:hover {
     color: #222;
     background-color: transparent;
+    text-decoration: none;
 }
 
 .bread-crumb a {
@@ -283,9 +316,9 @@ nav.navbar .nav-item .nav-link.last-active:before {
 
 nav.fixed-top {
     position: fixed;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    background-color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+   background: #fff;
     -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
 }
@@ -308,7 +341,7 @@ nav.fixed-top .nav-item {
 }
 
 nav.fixed-top .nav-item .nav-link {
-    color: #000 !important;
+    color: #000 ;
 }
 
 nav.fixed-top .nav-item .nav-link:before {
@@ -318,6 +351,7 @@ nav.fixed-top .nav-item .nav-link:before {
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
     font-weight: 600;
 }
+
 
 /*============ 4. Banner Section============*/
 .hero {
@@ -637,6 +671,8 @@ section.services .service-item .icon {
 }
 
 .blogs .blog-item .blog-img img {
+    object-fit: cover;
+    height: 200px;
     display: block;
     width: 100%;
     -webkit-transition: all .5s;
@@ -660,8 +696,7 @@ section.services .service-item .icon {
 .blogs .blog-item .blog-content h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #222;
-    margin-bottom: 15px;
+     margin-bottom: 15px;
 }
 
 .blogs .blog-item .blog-content p {
@@ -801,11 +836,11 @@ section.services .service-item .icon {
     font-family: "Poppins", sans-serif;
     -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    border-radius: 12px;
     color: #222;
+    border-radius: 8px;
     border: 0;
-    border-bottom: 2px solid #222;
+    background-color: #d3d3d3;
     height: 3em;
     -webkit-transition: all .4s ease;
     -o-transition: all .4s ease;
@@ -850,6 +885,7 @@ footer .contact-info h5 {
 footer .contact-info p,footer .contact-info p  a {
     color: #fff;
     font-size: 16px;
+    text-decoration: none;
 }
 
 footer hr {
@@ -1007,6 +1043,10 @@ section.banner-blog .banner-caption h1 {
     padding: 20px 0 0 10px;
     margin-bottom: 15px;
     height: 150px;
+}
+.form-check-input:checked{
+    background-color: #A9BA9D;
+    border-color: #A9BA9D;
 }
 .section-padding{
     padding-top: 100px;
