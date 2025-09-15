@@ -51,36 +51,3 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   alert("Thank you for your message! I'll get back to you soon.");
   this.reset();
 });
-
-/*============ contact button============*/
-
-
-    // Toggle when user changes switch
-/*============ contact button============*/
-
-
-    // Toggle when user changes switch
-    const toggle = document.getElementById("toggle-theme");
-    const body = document.body;
-    const themeLabel = document.getElementById("theme-label");
-
-    // Load saved theme
-    if (localStorage.getItem("theme") === "light") {
-      body.classList.add("light-mode");
-      toggle.checked = true;
-      themeLabel.textContent = "Light Mode";
-    }
-
-    toggle.addEventListener("change", () => {
-      if (toggle.checked) {
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-        themeLabel.textContent = "Dark Mode";
-      } else {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-        themeLabel.textContent = "Light Mode";
-      }
-    });
-
- 
