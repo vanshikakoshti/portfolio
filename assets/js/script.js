@@ -1,3 +1,26 @@
+/*============  Preloader============*/
+window.addEventListener('load', function () {
+        document.querySelector('.preloader').style.display = 'none';
+    });
+/*============ Navbar============*/
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggler = document.querySelector('.navbar-toggler');
+    const collapse = document.getElementById('navbarCollapse');
+
+    toggler.addEventListener('click', function () {
+      this.classList.toggle('open');
+    });
+
+    // Optional: Close the X when clicking on a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.getComputedStyle(toggler).display !== "none") {
+          toggler.classList.remove('open');
+          collapse.classList.remove('show');
+        }
+      });
+    });
+  });
 /*============ owl caraousel============*/
 var owl = $('.owl-project');
             owl.owlCarousel({
@@ -24,7 +47,7 @@ var owl = $('.owl-project');
 
             var owl = $('.owl-testimonial');
             owl.owlCarousel({
-                items:1, 
+                items:2, 
             // items change number for slider display on desktop
             
                 loop:true,
@@ -40,7 +63,7 @@ var owl = $('.owl-project');
                     items: 2
                     },
                     1000: {
-                    items: 1
+                    items: 2
                     }
                 }
             });
@@ -52,28 +75,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   this.reset();
 });
 /*============ contact button============*/
+// JS for theme toggle
+const toggle = document.getElementById('toggle-theme');
+const toggleLg = document.getElementById('toggle-theme-lg');
 
-
-    // Toggle when user changes switch
-    const toggle = document.getElementById("toggle-theme");
-    const body = document.body;
-    const themeLabel = document.getElementById("theme-label");
-
-    // Load saved theme
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
-      toggle.checked = true;
-      themeLabel.textContent = "Dark Mode";
+[toggle, toggleLg].forEach((toggler) => {
+    if (toggler) {
+        toggler.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+        });
     }
-
-    toggle.addEventListener("change", () => {
-      if (toggle.checked) {
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-        themeLabel.textContent = "Dark Mode";
-      } else {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-        themeLabel.textContent = "Light Mode";
-      }
-    });
+});

@@ -50,15 +50,19 @@
         <nav class="navbar  fixed-top navbar-expand-lg ">
             <div class="container">
                 <!-- LOGO -->
-                <a class='navbar-brand logo' href='/'>
+                <a class='navbar-brand logo px-2 order-1 order-lg-1' href='index.html'>
                    Vanshika
                 </a>
-
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <div class="form-check form-switch ml-4  order-2 order-lg-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="toggle-theme">
+                <label class="form-check-label" for="toggle-theme" id="theme-label">Light Mode</label>
+                </div>
+                <button class="navbar-toggler collapsed  order-3 order-lg-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
                 </button>
-
-                <div class="navbar-collapse collapse" id="navbarCollapse">
+                <div class="navbar-collapse collapse order-4 order-lg-2" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <!--Nav Links-->
                         <li class="nav-item">
@@ -80,27 +84,12 @@
                          <li></li>
                     </ul>
                 </div>
-                <div class="form-check form-switch ml-4">
-                <input class="form-check-input" type="checkbox" role="switch" id="toggle-theme">
-                <label class="form-check-label" for="toggle-theme" id="theme-label">Light Mode</label>
-                </div>
-
             </div>
         </nav>
         <!--Navbar End-->
 
         <!--Home Section Start-->
-        <!-- <section id="home" class="banner" style="background-image: url('assets/img/background/home-banner-bg.jpg')" >
-            <div class="container">
-               
-                <div class="banner-caption">
-                    <h1>Hi! I'm Vanshika Koshti.</h1>
-                    <p class="cd-headline clip mt-30">A Passionate Web Developer & Designer
-                    </p>
-                </div>
-                
-            </div>
-        </section> -->
+        
         <section class="hero">
       <h1>Vanshika Koshti</h1>
       <p>Web Developer, At CompuBrain.</p>
@@ -108,25 +97,29 @@
         <!--Home Section End-->
 
         <!--About Section Start-->
-        <section class="about section-padding" id="about">
+        <section class="about section-padding background-overlay" id="about">
+           
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-around">
+                    <div class="col-lg-12">
+                        <div class="heading text-center">
+                            <h6></h6>
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
                     <div class="col-lg-5 col-md-6">
                         <!--About Image-->
                         <div class="about-img">
-                            <img src="assets/img/about-img.jpg" alt="">
+                            <img src="assets/img/about-img.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-6">
+                    <div class="col-lg-5 col-md-6">
                         <!--About Content-->
                         <div class="about-content">
-                            <div class="heading">
-                                <h2>About Me</h2>
-                                <span></span>
-                            </div>
+                            
                             <p>I'm <b>Vanshika Koshti</b> I’m a passionate HTML Developer with a strong foundation in building clean, responsive, and accessible web pages. I specialize in writing semantic HTML5 code that ensures websites are both user-friendly and search-engine optimized.</p>
                             <p>With a keen eye for detail and a deep understanding of web standards, I bring designs to life with precision and performance in mind. I enjoy collaborating with designers, front-end developers, and teams to turn static visuals into interactive, browser-compatible experiences.</p>
-                            <p>Whether it’s crafting pixel-perfect layouts or ensuring cross-browser consistency, I focus on delivering high-quality markup that forms the solid base for any web project.</p>
+                           </p>
                             <!--About Social Icons-->
                             <div class="social-icons">
                                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -145,7 +138,8 @@
         <!--About Section End-->
 
         <!--Services Section Start-->
-        <section class="services bg-gray  section-padding" id="service">
+        <section class="services  bg-cream section-padding background-overlay" id="service">
+            
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -216,7 +210,7 @@
        
 
         <!--Blog Section Start-->
-        <section class="blogs section-padding " id="projects">
+        <section class="blogs section-padding background-overlay" id="projects">
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
@@ -237,7 +231,7 @@
                             </div>
                             <div class="blog-content">
                                 <h3>Portfolio Website</h3>
-                                <p>My personal portfolio showcasing my work.</p>
+                                <p>Presenting my work through a personal collection of projects.</p>
                                 <div class="blog-meta">
                                         <a class="main-btn" href='https://vanshikakoshti.github.io/portfolio/' target="_blank">View Project</a>
                                     
@@ -253,9 +247,25 @@
                             </div>
                             <div class="blog-content">
                                 <h3>Digital Marketing</h3>
-                                <p>Tech Digital Buzz empowers brands through data-driven digital marketing strategies.</p>
+                                <p>This project is intended for personal portfolio purposes only and is not connected to any real campaigns.</p>
                                 <div class="blog-meta">
-                                        <a class="main-btn" href='https://vanshikakoshti.github.io/digital-marketing/;' target="_blank">View Project</a>
+                                        <a class="main-btn" href='https://vanshikakoshti.github.io/digital-marketing/' target="_blank">View Project</a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href='https://vanshikakoshti.github.io/quiz-app/' target="_blank">
+                                    <img src="assets/img/blog/quize-app.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3>Quize App</h3>
+                                <p> This quiz app is for portfolio use only and not connected to any real exams or tests.</p>
+                                <div class="blog-meta">
+                                        <a class="main-btn" href='https://vanshikakoshti.github.io/quiz-app/' target="_blank">View Project</a>
                                    
                                 </div>
                             </div>
@@ -270,10 +280,25 @@
                             </div>
                             <div class="blog-content">
                                 <h3>To-Do App</h3>
-                                <p>A simple to-do app with React....</p>
+                                <p>A simple task management app built using React hooks(useState)to add, delete, and edit tasks.</p>
                                 <div class="blog-meta"> 
                                         <a class="main-btn" href='https://vanshikakoshti.github.io/todo-list/' target="_blank">View Project</a>
                                     
+                                </div>
+                            </div>
+                        </div>
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href='https://vanshikakoshti.github.io/newsapp' target="_blank">
+                                    <img src="assets/img/blog/news-monkey.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3>News App</h3>
+                                <p> This app was built for personal use and showcases. It is not affiliated with any real news platforms.</p>
+                                <div class="blog-meta">
+                                        <a class="main-btn" href='https://vanshikakoshti.github.io/newsapp' target="_blank">View Project</a>
                                 </div>
                             </div>
                         </div>
@@ -286,13 +311,12 @@
                             </div>
                             <div class="blog-content">
                                 <h3>TextUtils</h3>
-                                <p>TextUtils is utility which can be used to manipulate your text in the way you want....</p>
+                                <p>Built entirely with React function components Convert text to uppercase, lowercase, and more.</p>
                                 <div class="blog-meta">
                                         <a class="main-btn" href='https://vanshikakoshti.github.io/textutils/' target="_blank">View Project</a>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 
@@ -301,8 +325,16 @@
         <!--Blog Section End-->
 
         <!--Testimonials Section Start-->
-        <section class="testimonials section-padding" style="background-image: url('assets/img/background/testimonials-bg.jpg')">
+        <section class="testimonials bg-cream section-padding background-overlay">
             <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="heading text-center">
+                            <h6>Clients Review</h6>
+                            <h2>Testimonials</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="owl-carousel owl-theme owl-testimonial text-center">
@@ -341,7 +373,7 @@
         <!--Testimonials Section End-->
 
         <!--Contact Section Start-->
-        <section class="contact section-padding" id="contact">
+        <section class="contact section-padding background-overlay" id="contact">
             <div class="container">
                 
                 <div class="row">
